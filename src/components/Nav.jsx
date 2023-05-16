@@ -5,7 +5,7 @@ function Nav() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary nav-bg">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <img src={logo} alt="Logo" />
         </a>
         <button
@@ -21,14 +21,17 @@ function Nav() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto">
-            <a className="nav-link active text-white" aria-current="page" href="#">
+            <a className="nav-link active text-white" aria-current="page" href="/">
               Home
             </a>
-            <a className="nav-link text-white" href="#">
-              Features
+            <a className="nav-link text-white" href="/burns">
+              Burns
             </a>
-            <a className="nav-link text-white" href="#">
-              Pricing
+            <a className="nav-link text-white" href="/about">
+              About us
+            </a>
+            <a className="nav-link text-white" href="/reward">
+              Reward
             </a>
           </div>
         </div>

@@ -3,6 +3,7 @@ body {
   background-image: url('./img/backgound.png');
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
  
 }
 
@@ -10,4 +11,16 @@ body {
 .nav-bg {
   background: #102035;
   
+}
+
+.burn-history {
+  background: rgb(255, 222, 222);
+  background-image: url('./img/sm-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h3 {
+  margin: 5px;
+  padding: 5px;
 }

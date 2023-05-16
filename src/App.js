@@ -1,6 +1,6 @@
 import Dashboard from './pages/Dashboard';
 import Nav from './components/Nav';
-import PriceMarkVolumn from './components/PriceMarkVolumn';
+import Cards from './components/Cards';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -9,7 +9,7 @@ function App() {
     <div className='app'>
       <div className='container'>
         <Nav />
-        <PriceMarkVolumn />
+        <Cards />
         <Dashboard />
         <Footer />
         
