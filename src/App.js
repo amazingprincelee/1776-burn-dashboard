@@ -1,21 +1,24 @@
+import { Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import Nav from './components/Nav';
 import Cards from './components/Cards';
 import Footer from './components/Footer';
-import './App.css';
+import Burn from './pages/Burns';
+import Buy from './pages/Buy'
 
 function App() {
   return (
-    <div className='app'>
-      <div className='container'>
+    <div className="app">
+      <div className="container">
         <Nav />
         <Cards />
-        <Dashboard />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/burn" element={<Burn />} />
+          <Route path="/buy" element={<Buy />} />
+        </Routes>
         <Footer />
-        
       </div>
-    
-      
     </div>
   );
 }

@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import convert from 'ethereum-unit-converter';
 
+
+
 function Table({ onTotalValue }) {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
@@ -24,7 +26,7 @@ function Table({ onTotalValue }) {
           startblock: 0,
           endblock: 27000000,
           sort: 'desc',
-          apikey: '2KBH34YNQ4QHV4E5RHF5Y4QBCDWG5RJ5IP',
+          apikey: "2KBH34YNQ4QHV4E5RHF5Y4QBCDWG5RJ5IP",
         },
       });
       const formattedData = response.data.result.slice(0, 14).map((item) => ({
@@ -40,7 +42,7 @@ function Table({ onTotalValue }) {
   };
 
   const handleViewMore = () => {
-    navigate('/burns');
+    navigate('/burn');
   };
 
   const formatTime = (timestamp) => {

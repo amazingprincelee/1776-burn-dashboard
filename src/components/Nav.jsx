@@ -1,39 +1,63 @@
-import React from 'react';
-import logo from '../img/whiteNavLogo.png';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../img/whiteNavLogo.png";
 
 function Nav() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary nav-bg">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          <img src={logo} alt="Logo" />
-        </a>
+        <Link to="/" className="navbar-brand">
+          <img src={logo} alt="logo" className="navbar-brand logo" />
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          onClick={toggleNav}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav ms-auto">
-            <a className="nav-link active text-white" aria-current="page" href="/">
-              Home
-            </a>
-            <a className="nav-link text-white" href="/burns">
-              Burns
-            </a>
-            <a className="nav-link text-white" href="/about">
-              About us
-            </a>
-            <a className="nav-link text-white" href="/reward">
-              Reward
-            </a>
-          </div>
+        <div
+          className={`${isNavOpen ? "show" : ""} collapse navbar-collapse`}
+          id="navbarSupportedContent"
+        >
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link
+                to="/"
+                className="nav-link active text-light"
+                aria-current="page"
+                style={{ fontSize: "16px", margin: "10px" }}
+                onClick={() => setIsNavOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/burn"
+                className="nav-link text-light"
+                style={{ fontSize: "16px", margin: "10px" }}
+                onClick={() => setIsNavOpen(false)}
+              >
+                Burn
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/buy"
+                className="nav-link text-light"
+                style={{ fontSize: "16px", margin: "10px" }}
+              >
+                Buy 1776
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

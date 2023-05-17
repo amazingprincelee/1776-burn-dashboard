@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from 'react';
 
-
-
-
-
-
-
-
-
 function Cards() {
-
   const [price, setPrice] = useState(0);
   const [marketCap, setMarketCap] = useState(0);
   const [volume, setVolume] = useState(0);
 
+  const apiBaseURL = "https://api.dev.dex.guru/v1/chain/1/tokens";
+  const contractAddress = "0x679ec51c3989de468ce7b47ca6560636744f5ac6";
+  const apiKey = "i0Pxxb4APurIDf9E8LcVKK0GYjRVjpa2w4h_5tgZeJk";
+
   useEffect(() => {
-    fetch(
-      "https://api.dev.dex.guru/v1/chain/1/tokens/0x679ec51c3989de468ce7b47ca6560636744f5ac6/market/?api-key=i0Pxxb4APurIDf9E8LcVKK0GYjRVjpa2w4h_5tgZeJk"
-    )
-      .then((response) => response.json())
-      .then((data) => {
+    const fetchTokenData = async () => {
+      try {
+        const response = await fetch(
+          `${apiBaseURL}/${contractAddress}/market/?api-key=${apiKey}`
+        );
+        const data = await response.json();
         setPrice(data.price_usd.toFixed(8));
         setMarketCap(
           Math.round(data.price_usd.toFixed(8) * 10000000000)
@@ -32,16 +28,16 @@ function Cards() {
             .toString()
             .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
         );
-        //   setPriceChange(data.pairs[0].priceChange.h24);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.log(err.message);
-      });
+      }
+    };
+
+    fetchTokenData();
   }, []);
 
-
   return (
-    <div className="container text-center " style={{color: "white"}}>
+    <div className="container text-center" style={{ color: "white" }}>
       <div className="row align-items-start">
         <div className="col-sm-12 col-md mb-3">
           <div
@@ -82,4 +78,3 @@ function Cards() {
 }
 
 export default Cards;
-

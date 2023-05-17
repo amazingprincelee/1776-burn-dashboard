@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Table from '../components/Table';
 
 function Burns() {
   return (
-    <div>Burns</div>
+    <div className='container bg-warning'>
+      <Table />
+    </div>
   )
 }
 
-export default Burns
+export default Burns;
