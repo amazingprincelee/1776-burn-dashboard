@@ -41,13 +41,13 @@ function Cards() {
       <div className="row align-items-start">
         <div className="col-sm-12 col-md mb-3">
           <div
-            className="p-2 rounded"
+            className="p-2 rounded mt-3"
             style={{
               background: 'linear-gradient(135deg, #81C3D7, #3275A8)',
               boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
             }}
           >
-            1776 Price: {price}
+            <h4>1776 Price:</h4>  <p>$ {price}</p> 
           </div>
         </div>
         <div className="col-sm-12 col-md mb-3">
@@ -58,7 +58,7 @@ function Cards() {
               boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
             }}
           >
-            Market Cap: {marketCap}
+            <h4>Market Cap:</h4>  <p>$ {marketCap}</p> 
           </div>
         </div>
         <div className="col-sm-12 col-md mb-3">
@@ -69,7 +69,7 @@ function Cards() {
               boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
             }}
           >
-            Volume: {volume}
+            <h4>Volume:</h4>  <p>$ {volume}</p>  
           </div>
         </div>
       </div>
