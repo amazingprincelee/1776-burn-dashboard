@@ -3,7 +3,7 @@ import Table from '../components/Table';
 
 function Burns() {
   return (
-    <div className='container bg-warning'>
+    <div className='container lite-red'>
       <Table />
     </div>
   )

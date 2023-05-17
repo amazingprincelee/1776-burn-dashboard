@@ -24,3 +24,8 @@ h3 {
   margin: 5px;
   padding: 5px;
 }
+
+.lite-red {
+  background: rgb(255, 222, 222);
+  color: black;
+}

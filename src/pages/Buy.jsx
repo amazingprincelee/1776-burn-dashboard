@@ -2,7 +2,7 @@ import React from 'react'
 
 function Buy() {
   return (
-    <div className='container bg-warning text-center'>
+    <div className='container lite-red text-center'>
         <h1>Buy on UniSwap</h1>
         <div>
         <ol>
