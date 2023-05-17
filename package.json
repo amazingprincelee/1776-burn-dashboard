@@ -12,7 +12,7 @@
     "dotenv": "^16.0.3",
     "dotenv-webpack": "^8.0.1",
     "ethereum-unit-converter": "^0.0.17",
-    "ethers": "^6.3.0",
+    "ethers": "^5.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
