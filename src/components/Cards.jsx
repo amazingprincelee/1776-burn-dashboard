@@ -38,10 +38,10 @@ function Cards() {
 
   return (
     <div className="container text-center" style={{ color: "white" }}>
-      <div className="row align-items-start">
+      <div className="row align-items-start mt-3">
         <div className="col-sm-12 col-md mb-3">
           <div
-            className="p-2 rounded mt-3"
+            className="p-2 rounded "
             style={{
               background: 'linear-gradient(135deg, #81C3D7, #3275A8)',
               boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
